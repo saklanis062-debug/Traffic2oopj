@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; background: #12161c; color: #e8edf2; height: 100vh; display: flex; flex-direction: column; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 12px 22px; background: #1b222b; border-bottom: 2px solid #2d6cdf; }
+h1 { margin: 0; font-size: 20px; letter-spacing: 3px; }
+.badge { padding: 5px 12px; border-radius: 20px; font-size: 12px; }
+.badge.on { background: #1f6f43; } .badge.off { background: #7a2d2d; }
+main { flex: 1; display: flex; min-height: 0; }
+#stage { flex: 1; min-width: 0; }
+canvas { width: 100%; height: 100%; display: block; cursor: grab; }
+aside { width: 300px; padding: 14px; overflow-y: auto; background: #161b22; }
+.card { background: #1f2630; border-radius: 10px; padding: 14px; margin-bottom: 14px; }
+h2 { margin: 0 0 10px; font-size: 14px; text-transform: uppercase; color: #8fb4ff; letter-spacing: 1px; }
+.row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #2c3541; font-size: 14px; }
+.row.total { font-weight: bold; }
+.chip { padding: 2px 12px; border-radius: 12px; color: #000; }
+.chip.green { background: #2ecc71; } .chip.yellow { background: #ffcc00; } .chip.red { background: #ff3b30; color: #fff; }
+.btns { display: flex; gap: 8px; margin-bottom: 12px; }
+button { background: #2b3542; color: #fff; border: 0; border-radius: 6px; padding: 8px 12px; cursor: pointer; font-size: 14px; }
+button:hover { background: #3a4757; }
+.btns button { flex: 1; } .go { background: #1f8f55; } .stop { background: #a93a3a; }
+label { display: block; font-size: 13px; margin: 10px 0; }
+select { width: 100%; margin-top: 4px; padding: 7px; background: #12161c; color: #fff; border: 1px solid #3a4757; border-radius: 6px; }
+.cam { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 12px; font-size: 13px; }
+.cam span { width: 100%; }
+.cam button { padding: 6px 10px; }
+.hint { font-size: 12px; color: #8896a8; margin: 10px 0 0; }
+@media (max-width: 800px) { main { flex-direction: column; } aside { width: 100%; } }

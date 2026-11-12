@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Traffic Flow Simulator</title>
+  <link rel="stylesheet" href="traffic.css">
+</head>
+<body>
+  <header>
+    <h1>TRAFFIC FLOW SIMULATOR</h1>
+    <span id="javaStatus" class="badge off">Java backend: connecting...</span>
+  </header>
+
+  <main>
+    <section id="stage"><canvas id="view"></canvas></section>
+
+    <aside>
+      <div class="card">
+        <h2>Live Dashboard</h2>
+        <div class="row"><span>North Vehicles</span><b id="vN">0</b></div>
+        <div class="row"><span>South Vehicles</span><b id="vS">0</b></div>
+        <div class="row"><span>East Vehicles</span><b id="vE">0</b></div>
+        <div class="row"><span>West Vehicles</span><b id="vW">0</b></div>
+        <div class="row total"><span>Total Vehicles</span><b id="vTotal">0</b></div>
+        <div class="row"><span>Green Direction</span><b id="greenDir">North / South</b></div>
+        <div class="row"><span>Current Signal</span><b id="signal" class="chip green">GREEN</b></div>
+        <div class="row"><span>Remaining Time</span><b id="timer">8 s</b></div>
+        <div class="row"><span>Measured Density</span><b id="density">LOW</b></div>
+        <div class="row"><span>Average Flow</span><b id="flow">0 veh/min</b></div>
+      </div>
+
+      <div class="card">
+        <h2>Controls</h2>
+        <div class="btns">
+          <button id="btnStart" class="go">Start</button>
+          <button id="btnPause">Pause</button>
+          <button id="btnReset" class="stop">Reset</button>
+        </div>
+        <label>Traffic Density (arrival rate)
+          <select id="selDensity">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+        </label>
+        <label>Simulation Speed
+          <select id="selSpeed">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="5">5x</option>
+          </select>
+        </label>
+        <div class="cam">
+          <span>Camera</span>
+          <button data-cam="left">&#9664;</button>
+          <button data-cam="right">&#9654;</button>
+          <button data-cam="up">&#9650;</button>
+          <button data-cam="down">&#9660;</button>
+          <button data-cam="in">+</button>
+          <button data-cam="out">&minus;</button>
+        </div>
+        <p class="hint">Tip: drag on the 3D view to rotate/tilt.</p>
+      </div>
+    </aside>
+  </main>
+
+  <script src="traffic.js"></script>
+</body>
+</html>
